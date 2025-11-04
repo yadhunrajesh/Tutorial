@@ -1,0 +1,32 @@
+employees = []  # List to store tuples
+
+
+# Function to add employee
+def add_employee():
+    emp_id = input("Enter Employee ID: ")
+    name = input("Enter Employee Name: ")
+    position = input("Enter Employee Position: ")
+    salary = input("Enter Employee Salary: ")
+
+    employee = (emp_id, name, position, salary)  # create tuple
+    employees.append(employee)  # add tuple into list
+
+    print("Employee added successfully!\n")
+
+
+# Function to display all employees
+def display_employees():
+    print("\n===== Employee Details =====")
+    for emp in employees:      # emp takes one tuple at a time
+        print(emp)
+    print("----------------------------")
+
+
+# Main program
+num = int(input("How many employees you want to add? "))
+
+for i in range(num):
+    print("\nEnter details of Employee", i + 1)
+    add_employee()    # calling the function
+
+display_employees()   # calling the display function
